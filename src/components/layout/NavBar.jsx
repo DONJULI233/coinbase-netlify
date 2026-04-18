@@ -524,10 +524,8 @@ const NavBar = () => {
               aria-label="Crypto App Logo"
             >
               <circle cx="20" cy="20" r="20" fill="#0052FF" />
-              <path
-                d="M20 6C12.268 6 6 12.268 6 20s6.268 14 14 14 14-6.268 14-14S27.732 6 20 6zm-3.6 16.8a3.6 3.6 0 110-7.2h7.2a3.6 3.6 0 110 7.2h-7.2z"
-                fill="white"
-              />
+              <rect x="12" y="12" width="16" height="16" rx="4" fill="white" />
+              <circle cx="20" cy="20" r="4" fill="#0052FF" />
             </svg>
           )}
         </div>

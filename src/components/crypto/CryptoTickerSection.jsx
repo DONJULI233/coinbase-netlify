@@ -1,39 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-interface Crypto {
-  id: string;
-  name: string;
-  symbol: string;
-  image: string;
-  current_price: number;
-  price_change_percentage_24h: number;
-}
-
-interface CoinGeckoMarket {
-  id: string;
-  name: string;
-  symbol: string;
-  image: string;
-  current_price: number;
-  price_change_percentage_24h: number | null;
-}
-
-interface TrendingItem {
-  item: {
-    id: string;
-    name: string;
-    symbol: string;
-    large: string;
-    price_btc: number;
-  };
-}
-
 const CryptoTickerSection = () => {
   const [activeTab, setActiveTab] = useState("tradable");
-  const [cryptos, setCryptos] = useState<Crypto[]>([]);
+  const [cryptos, setCryptos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCryptos = async () => {
@@ -57,21 +29,19 @@ const CryptoTickerSection = () => {
         const response = await axios.get(url);
 
         if (activeTab === "gainers") {
-          const sorted = (response.data as CoinGeckoMarket[])
-            .filter(
-              (c: CoinGeckoMarket) => c.price_change_percentage_24h != null,
-            )
+          const sorted = response.data
+            .filter((c) => c.price_change_percentage_24h != null)
             .sort(
-              (a: CoinGeckoMarket, b: CoinGeckoMarket) =>
+              (a, b) =>
                 (b.price_change_percentage_24h || 0) -
                 (a.price_change_percentage_24h || 0),
             )
-            .slice(0, 6) as Crypto[];
+            .slice(0, 6);
           setCryptos(sorted);
         } else if (activeTab === "new") {
-          const transformed = (response.data.coins as TrendingItem[])
+          const transformed = response.data.coins
             .slice(0, 6)
-            .map((item: TrendingItem) => ({
+            .map((item) => ({
               id: item.item.id,
               name: item.item.name,
               symbol: item.item.symbol,
@@ -81,7 +51,7 @@ const CryptoTickerSection = () => {
             }));
           setCryptos(transformed);
         } else {
-          setCryptos(response.data as Crypto[]);
+          setCryptos(response.data);
         }
       } catch (err) {
         console.error("Error fetching cryptos:", err);

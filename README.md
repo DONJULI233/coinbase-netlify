@@ -64,3 +64,7 @@ Send data to the backend API and ensure it is properly stored in the database (M
 Push your backend code to GitHub Classroom, deploy the backend (recommended: Render), and integrate it into your crypto app frontend repository. After completing the integration, deploy the updated frontend as well. Finally, submit the links to your deployed backend, deployed frontend, and your updated crypto app repository via the Google Form attached.
 
 **NOTE:** Ensure that all submitted links are accurate and working, as no marks will be awarded for invalid or inaccessible submissions.
+
+## Deployment Naming Guidance
+
+When deploying this project (e.g., to Netlify, Vercel, or Render), ensure that any references to deployment use neutral naming such as `yourname-crypto-app.netlify.app`. Do not include any real company names in domains or subdomains to avoid trademark infringement.

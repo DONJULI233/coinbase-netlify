@@ -1,6 +1,3 @@
-import NavBar from "../components/layout/NavBar";
-import Footer from "../components/layout/Footer";
-
 const sampleAssets = [
   {
     id: "bitcoin",
@@ -48,12 +45,8 @@ const sampleAssets = [
 
 const Explore = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <header>
-        <NavBar />
-      </header>
-
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8">
+    <div className="w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8">
         <div className="mb-6">
           <h1 className="text-2xl sm:text-3xl font-serif font-bold">Explore</h1>
           <p className="text-gray-600 mt-2">
@@ -143,9 +136,7 @@ const Explore = () => {
             </button>
           </div>
         </section>
-      </main>
-
-      <Footer />
+      </div>
     </div>
   );
 };

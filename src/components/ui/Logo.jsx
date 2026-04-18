@@ -1,11 +1,4 @@
-import React from 'react';
-
-interface LogoProps {
-  height?: number;
-  className?: string;
-}
-
-const Logo: React.FC<LogoProps> = ({ height = 28, className = '' }) => (
+const Logo = ({ height = 28, className = '' }) => (
   <div className={`flex items-center ${className}`}>
     <svg
       width={height}
@@ -20,7 +13,7 @@ const Logo: React.FC<LogoProps> = ({ height = 28, className = '' }) => (
         fill="white"
       />
     </svg>
-    <span className="ml-2 text-xl font-bold text-gray-900">CryptoApp</span>
+    <span className="ml-2 text-xl font-bold text-gray-900">Crypto App</span>
   </div>
 );
 

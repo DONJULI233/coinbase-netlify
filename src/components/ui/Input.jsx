@@ -1,12 +1,4 @@
-import React from 'react';
-
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  placeholder?: string;
-  type?: string;
-  className?: string;
-}
-
-const Input: React.FC<InputProps> = ({
+const Input = ({
   placeholder = '',
   type = 'email',
   className = '',

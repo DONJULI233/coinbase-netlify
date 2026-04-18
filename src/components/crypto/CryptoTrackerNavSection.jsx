@@ -1,15 +1,13 @@
 import { useState } from "react";
 import CryptoList from "./CryptoList";
 
-type TabType = "tradable" | "gainers" | "new";
-
 const CryptoTrackerNavSection = () => {
-  const [activeTab, setActiveTab] = useState<TabType>("tradable");
+  const [activeTab, setActiveTab] = useState("tradable");
 
   const tabs = [
-    { id: "tradable" as TabType, name: "Tradable" },
-    { id: "gainers" as TabType, name: "Top gainers" },
-    { id: "new" as TabType, name: "New Listings" },
+    { id: "tradable", name: "Tradable" },
+    { id: "gainers", name: "Top gainers" },
+    { id: "new", name: "New Listings" },
   ];
 
   return (

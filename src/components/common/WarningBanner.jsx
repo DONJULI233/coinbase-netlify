@@ -1,12 +1,12 @@
 export default function WarningBanner() {
   return (
-    <div className="bg-red-100 border-b-4 border-red-400 px-4 py-4">
+    <div className="bg-yellow-100 border-b-4 border-yellow-400 px-4 py-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg
-                className="h-6 w-6 text-red-600"
+                className="h-6 w-6 text-yellow-600"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -18,9 +18,8 @@ export default function WarningBanner() {
               </svg>
             </div>
             <div className="ml-3">
-              <p className="text-sm font-bold text-red-800 text-center">
-                ⚠️ <strong>STUDENT PROJECT - DEMO ONLY</strong> ⚠️<br />
-                This is a student project and is not affiliated with any real cryptocurrency platform.
+              <p className="text-sm font-bold text-yellow-800 text-center mt-0.5">
+                This is a student demo project and is not affiliated with any real cryptocurrency platform.
               </p>
             </div>
           </div>

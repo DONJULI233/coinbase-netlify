@@ -11,4 +11,15 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    middlewares: [
+      {
+        apply: "serve",
+        handler: (req, res, next) => {
+          res.setHeader("X-Robots-Tag", "noindex, nofollow");
+          next();
+        },
+      },
+    ],
+  },
 });

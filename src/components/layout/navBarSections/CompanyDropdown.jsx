@@ -31,7 +31,7 @@ const CompanyDropdown = () => {
     },
     {
       title: "Blog",
-      subtitle: "Read the latest from Coinbase",
+      subtitle: "Read the latest from the project",
       icon: <NewspaperIcon className="w-5 h-5" />,
     },
     {

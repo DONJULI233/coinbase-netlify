@@ -34,19 +34,19 @@ const BaseAppSection = () => {
             >
               <picture>
                 <source
-                  srcSet="https://images.ctfassets.net/o10es7wu5gm1/5bELGzAuqD4Kh1UhKOOuut/c1f4c17cc78ce3505ec04b0eb0522895/CB_LOLP__1_.png?fm=avif&w=1200&h=960&q=65"
+                  srcSet="https://via.placeholder.com/1200x960.png?text=Demo+App+Screenshot"
                   type="image/avif"
                   width="1200"
                   height="960"
                 />
                 <source
-                  srcSet="https://images.ctfassets.net/o10es7wu5gm1/5bELGzAuqD4Kh1UhKOOuut/c1f4c17cc78ce3505ec04b0eb0522895/CB_LOLP__1_.png?fm=webp&w=1200&h=960&q=75"
+                  srcSet="https://via.placeholder.com/1200x960.png?text=Demo+App+Screenshot"
                   type="image/webp"
                   width="1200"
                   height="960"
                 />
                 <img
-                  src="https://images.ctfassets.net/o10es7wu5gm1/5bELGzAuqD4Kh1UhKOOuut/c1f4c17cc78ce3505ec04b0eb0522895/CB_LOLP__1_.png"
+                  src="https://via.placeholder.com/1200x960.png?text=Demo+App+Screenshot"
                   alt="Base App screen"
                   loading="lazy"
                   width="1200"

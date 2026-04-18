@@ -1,6 +1,6 @@
-import AdvancedImg from "../assets/Advanced.png";
-import ZeroFees from "../assets/zero_fees_us.png";
-import CB from "../assets/CB_LOLP__1_.png";
+import AdvancedImg from "../../assets/Advanced.png";
+import ZeroFees from "../../assets/zero_fees_us.png";
+import CB from "../../assets/app_screenshot.png";
 
 const GridSection = () => {
   return (
@@ -85,7 +85,7 @@ const GridSection = () => {
         </div>
         <div className="gap-3 flex flex-col justify-center">
           <p className="py-2 px-5 border rounded-2xl text-gray-500 border-gray-500 w-50">
-            <span className="mr-5">C</span>BASE APP
+            <span className="mr-5">C</span>CRYPTO APP
           </p>
           <p className="text-5xl leading-tight font-serif">
             Countless ways to earn <br /> crypto with the Base App.
