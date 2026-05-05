@@ -19,13 +19,24 @@ app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/crypto', cryptoRoutes);
+
+// Root route - Welcome message
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Backend working successfully! 🎉',
+    name: 'Juliana',
+    status: 'Online',
+    timestamp: new Date().toISOString(),
+  });
+});
 
 // Health check
 app.get('/api/health', (req, res) => {
